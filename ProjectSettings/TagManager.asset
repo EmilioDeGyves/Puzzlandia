@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SpawnpointL
+  - SpawnpointR
+  - SpawnpointU
+  - SpawnpointD
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Piso
+    uniqueID: 1283474301
+    locked: 0
+  - name: enPiso
+    uniqueID: 2159581703
+    locked: 0
+  - name: Personaje
+    uniqueID: 1235465453
+    locked: 0
+  - name: aire
+    uniqueID: 719468209
+    locked: 0
+  - name: Minigames
+    uniqueID: 2258451281
     locked: 0
