@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MenuPrincipal.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/MundoMatematicas/Nivel1/Nivel1-Cuarto1.unity
     guid: 005ca5f65a187e6468c64c9343119b63
   - enabled: 1
@@ -17,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MundoMatematicas/Nivel1/Nivel1-Cuarto3.unity
     guid: 43bd6e2f896a2a943b2b2b7bf1cdde5a
+  - enabled: 1
+    path: Assets/Scenes/MundoMatematicas/Nivel1/Nivel1-Cuarto4.unity
+    guid: d9438f00632dd844ea7961dfee72fd1e
   m_configObjects: {}
