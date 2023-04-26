@@ -5,19 +5,15 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IDragHandler, I
 {
     public GameObject itemPrefab;
     private GameObject draggedInstance;
-    private Canvas canvas;
-
-    private void Awake()
-    {
-        canvas = FindObjectOfType<Canvas>();
-    }
+    private RectTransform canvasRectTransform;
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (itemPrefab != null)
         {
-            draggedInstance = Instantiate(itemPrefab, canvas.transform);
+            draggedInstance = Instantiate(itemPrefab, transform.position, Quaternion.identity, FindObjectOfType<Canvas>().transform);
             draggedInstance.transform.SetAsLastSibling();
+            canvasRectTransform = draggedInstance.GetComponent<RectTransform>();
             UpdateDraggedItemPosition(eventData);
         }
     }
@@ -35,9 +31,9 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IDragHandler, I
         if (draggedInstance != null)
         {
             DropSlot slot = eventData.pointerCurrentRaycast.gameObject?.GetComponent<DropSlot>();
-            if (slot != null)
+            if (slot != null && !slot.IsOccupied)
             {
-                slot.OnDrop(draggedInstance);
+                slot.OnDrop(eventData);
             }
             else
             {
@@ -48,7 +44,9 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IDragHandler, I
 
     private void UpdateDraggedItemPosition(PointerEventData eventData)
     {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, eventData.position, eventData.pressEventCamera, out Vector2 localPoint);
-        draggedInstance.transform.localPosition = localPoint;
+        RectTransform canvasRectTransform = draggedInstance.transform.parent.GetComponent<RectTransform>();
+        Vector2 anchoredPosition;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRectTransform, eventData.position, eventData.pressEventCamera, out anchoredPosition);
+        draggedInstance.GetComponent<RectTransform>().anchoredPosition = anchoredPosition;
     }
 }
