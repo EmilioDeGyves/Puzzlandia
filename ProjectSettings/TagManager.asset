@@ -9,6 +9,8 @@ TagManager:
   - SpawnpointU
   - SpawnpointD
   - NumberSlots
+  - ArticuloPalabra
+  - ArticuloObjeto
   layers:
   - Default
   - TransparentFX

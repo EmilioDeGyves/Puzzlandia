@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MundoMatematicas/Nivel1/Nivel1-Cuarto4.unity
     guid: d9438f00632dd844ea7961dfee72fd1e
+  - enabled: 1
+    path: Assets/Scenes/MundoMatematicas/Nivel2/Conjugaciones.unity
+    guid: 56a69e08c0667c047822342265f49c10
+  - enabled: 1
+    path: Assets/Scenes/MundoMatematicas/Nivel2/Articulos.unity
+    guid: 5cc965b73a71d1c48b9be8d1a53edc9b
   m_configObjects: {}

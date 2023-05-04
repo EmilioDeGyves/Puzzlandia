@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4998821877820882860}
   - component: {fileID: 4998821877820882867}
   - component: {fileID: 4998821877820882861}
+  - component: {fileID: 1540279720}
   m_Layer: 0
   m_Name: PersonajePrincipal
   m_TagString: Player
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4998821877820882870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.08, y: -4.14, z: 0}
-  m_LocalScale: {x: 0.9037067, y: 0.6789525, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,6 +103,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   moveSpeed: 3
+  playerSprites:
+  - {fileID: 21300000, guid: 9a549180cc142874c94d1d5b15f9834e, type: 3}
+  - {fileID: 21300000, guid: c41f20c8a891e6446a447b32e29940ea, type: 3}
+  - {fileID: 21300000, guid: 2e47a50950ac5f64c8bda2449ecaabbf, type: 3}
+  - {fileID: 21300000, guid: 9be73b8ee35b0a645a24f1d83ba615de, type: 3}
 --- !u!70 &4998821877820882860
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,8 +121,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04232327, y: -0.12792595}
-  m_Size: {x: 1.1975098, y: 1.9694815}
+  m_Offset: {x: 0.04232332, y: -0.647928}
+  m_Size: {x: 0.7805702, y: 0.9890399}
   m_Direction: 0
 --- !u!50 &4998821877820882867
 Rigidbody2D:
@@ -153,3 +159,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   inventoryUI: {fileID: 0}
+--- !u!95 &1540279720
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4998821877820882870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: caaba56b6dd71164c9b1842a25c7a6a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

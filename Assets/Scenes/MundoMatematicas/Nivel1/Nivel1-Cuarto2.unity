@@ -2023,6 +2023,7 @@ GameObject:
   - component: {fileID: 1149742953}
   - component: {fileID: 1149742952}
   - component: {fileID: 1149742957}
+  - component: {fileID: 1149742958}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Player
@@ -2081,6 +2082,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1501566216}
   moveSpeed: 3
+  playerSprites:
+  - {fileID: 21300000, guid: 9a549180cc142874c94d1d5b15f9834e, type: 3}
+  - {fileID: 21300000, guid: c41f20c8a891e6446a447b32e29940ea, type: 3}
+  - {fileID: 21300000, guid: 2e47a50950ac5f64c8bda2449ecaabbf, type: 3}
+  - {fileID: 21300000, guid: 9be73b8ee35b0a645a24f1d83ba615de, type: 3}
 --- !u!212 &1149742955
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2177,6 +2183,26 @@ MonoBehaviour:
   doorLock: {fileID: 2010525772}
   selectedSlot: 0
   answerSlots: []
+--- !u!95 &1149742958
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149742951}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: caaba56b6dd71164c9b1842a25c7a6a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1150906895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3537,7 +3563,7 @@ MonoBehaviour:
   playerTag: Player
   spawnPointTag: SpawnpointD
   finalNivel: 0
-  nextScene: {fileID: 0}
+  LevelUnlocked: 
 --- !u!61 &1736789960
 BoxCollider2D:
   m_ObjectHideFlags: 0
