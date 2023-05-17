@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MundoMatematicas/Nivel2/Articulos.unity
     guid: 5cc965b73a71d1c48b9be8d1a53edc9b
+  - enabled: 1
+    path: Assets/Scenes/MundoMatematicas/Nivel2/SinsCorrectos.unity
+    guid: 94d3626da664f9342a6e13075f6e4bc8
+  - enabled: 1
+    path: Assets/Scenes/MundoMatematicas/Nivel2/Acentuaciones.unity
+    guid: dc2802ef6ddcc1a4f8b0a0f999f24ea1
   m_configObjects: {}
