@@ -11,6 +11,8 @@ TagManager:
   - NumberSlots
   - ArticuloPalabra
   - ArticuloObjeto
+  - WordLimit
+  - Word-LvL1
   layers:
   - Default
   - TransparentFX
