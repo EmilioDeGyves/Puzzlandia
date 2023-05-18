@@ -7,11 +7,12 @@ public class Notas : MonoBehaviour
     public GameObject objectToShow;
     public string playerTag = "Player";
 
+
     private void Start()
     {
         if (objectToShow == null)
         {
-            Debug.LogError("objectToShow no est· asignado en el componente ShowObjectOnOverlap.");
+            Debug.LogError("objectToShow no est√° asignado en el componente ShowObjectOnOverlap.");
         }
         objectToShow.SetActive(false);
         
@@ -21,7 +22,7 @@ public class Notas : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-           
+
             objectToShow.SetActive(true);
         }
     }
