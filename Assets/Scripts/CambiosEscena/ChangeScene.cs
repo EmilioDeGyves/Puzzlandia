@@ -8,11 +8,15 @@ public class ChangeScene : MonoBehaviour
     public string targetScene;
     public string playerTag = "Player";
     public string spawnPointTag = "SpawnPoint";
-
+    public bool finalNivel;
+    public string LevelUnlocked;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(playerTag))
         {
+            if (finalNivel) { 
+            PlayerPrefs.SetInt("Level"+ LevelUnlocked + "Unlocked", 1);
+            }
             SceneManager.LoadScene(targetScene);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -35,4 +39,5 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
+   
 }
