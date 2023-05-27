@@ -3077,7 +3077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322698099}
   m_Layer: 0
-  m_Name: AnsNumbers
+  m_Name: AnsNumberSlots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
