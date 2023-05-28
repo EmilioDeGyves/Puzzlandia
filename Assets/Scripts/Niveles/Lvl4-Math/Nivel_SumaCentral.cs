@@ -7,6 +7,8 @@ using TMPro;
 public class Nivel_SumaCentral : MonoBehaviour
 {
     public GameObject doorLock;
+    public GameObject centerColider;
+    public GameObject canvas;
     private int[] intAll_12 = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
     private int[] izqsdsdIntAll = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
 
@@ -33,7 +35,9 @@ public class Nivel_SumaCentral : MonoBehaviour
             (intAll_12[1] + intAll_12[2] + intAll_12[3]) == (intAll_12[5] + intAll_12[6] + intAll_12[7]) &&
             (intAll_12[1] + intAll_12[2] + intAll_12[3]) == (intAll_12[7] + intAll_12[8] + intAll_12[1]))
         {
-            Destroy(doorLock);
+            doorLock.SetActive(false);
+            centerColider.SetActive(false);
+            canvas.SetActive(false);
         }
     }
 

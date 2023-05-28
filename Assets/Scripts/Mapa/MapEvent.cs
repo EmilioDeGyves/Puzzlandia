@@ -25,7 +25,17 @@ public class MapEvent : MonoBehaviour
         }
         
     }
-        private void OnMouseDown()
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject)
+        {
+
+            colide = false;
+
+        }
+    }
+    private void OnMouseDown()
     {
         Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, 0.1f, playerLayer);
 

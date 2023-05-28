@@ -49,7 +49,7 @@ public class Nivel1Cuarto2 : MonoBehaviour
                 playerAnswers[3] == correctAnswers[3] &&
                 playerAnswers[4] == correctAnswers[4])
             {
-                Destroy(doorLock);
+                doorLock.SetActive(false);
             }
         }
     }
