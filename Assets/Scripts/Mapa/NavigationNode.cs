@@ -17,8 +17,8 @@ public class NavigationNode : MonoBehaviour
     public NavigationNode down;
     public NavigationNode left;
     public NavigationNode right;
+    public int levelNumber;
 
-    
     public NavigationNode GetConnectedNode(Direction direction)
     {
         switch (direction)

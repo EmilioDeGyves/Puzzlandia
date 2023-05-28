@@ -7,6 +7,7 @@ public class NavigationController : MonoBehaviour
     public NavigationNode currentNode;
     public GameObject player;
     public int velocidad;
+
     private void Update()
     {
         // Mover el jugador hacia el nodo actual
@@ -43,10 +44,9 @@ public class NavigationController : MonoBehaviour
 
             if (nextNode != null && nextNode.isUnlocked.isUnlocked)
             {
-                
-                    currentNode = nextNode;
-
-
+                currentNode = nextNode;
+                // Cuando te mueves a un nuevo nodo, lo desbloqueas.
+                UnlockNode.UnlockLevel(nextNode.levelNumber);
             }
         }
     }

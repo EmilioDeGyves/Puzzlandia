@@ -326,6 +326,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 642510094}
   right: {fileID: 1586862007}
+  levelNumber: 0
 --- !u!4 &307415280
 Transform:
   m_ObjectHideFlags: 0
@@ -451,6 +452,8 @@ GameObject:
   - component: {fileID: 439236536}
   - component: {fileID: 439236535}
   - component: {fileID: 439236537}
+  - component: {fileID: 439236538}
+  - component: {fileID: 439236539}
   m_Layer: 0
   m_Name: Nivel2_Mate
   m_TagString: Untagged
@@ -475,6 +478,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 0}
   right: {fileID: 642510094}
+  levelNumber: 0
 --- !u!4 &439236536
 Transform:
   m_ObjectHideFlags: 0
@@ -503,8 +507,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7140679813eca9447bb2cfd17eed6561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 2
+  levelNumber: 1
   isUnlocked: 0
+--- !u!114 &439236538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439236534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a57b1f7856e3a4086c2872e0f0f8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: AbrirNivel2
+  isCompleted: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  scene: Math-Lvl2
+--- !u!58 &439236539
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439236534}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &458407129
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +932,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 439236535}
   right: {fileID: 307415279}
+  levelNumber: 0
 --- !u!58 &642510095
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -927,7 +966,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 1
-  scene: Nivel1-Cuarto1
+  scene: Math-Lvl1
 --- !u!114 &642510097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +992,8 @@ GameObject:
   - component: {fileID: 807424563}
   - component: {fileID: 807424562}
   - component: {fileID: 807424564}
+  - component: {fileID: 807424565}
+  - component: {fileID: 807424566}
   m_Layer: 0
   m_Name: Nivel3_Mate
   m_TagString: Untagged
@@ -977,6 +1018,7 @@ MonoBehaviour:
   down: {fileID: 439236535}
   left: {fileID: 0}
   right: {fileID: 1435746459}
+  levelNumber: 0
 --- !u!4 &807424563
 Transform:
   m_ObjectHideFlags: 0
@@ -1005,8 +1047,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7140679813eca9447bb2cfd17eed6561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 0
+  levelNumber: 2
   isUnlocked: 0
+--- !u!114 &807424565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807424561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a57b1f7856e3a4086c2872e0f0f8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: AbrirNivel3
+  isCompleted: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  scene: Math-Lvl3
+--- !u!58 &807424566
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807424561}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1047252505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1094,7 @@ GameObject:
   - component: {fileID: 1047252507}
   - component: {fileID: 1047252506}
   - component: {fileID: 1047252508}
+  - component: {fileID: 1047252509}
   m_Layer: 0
   m_Name: Final
   m_TagString: Untagged
@@ -1042,6 +1119,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 0}
   right: {fileID: 1194424150}
+  levelNumber: 0
 --- !u!4 &1047252507
 Transform:
   m_ObjectHideFlags: 0
@@ -1073,6 +1151,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 8
   isUnlocked: 0
+--- !u!58 &1047252509
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047252505}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1047436644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1178,8 @@ GameObject:
   - component: {fileID: 1047436646}
   - component: {fileID: 1047436645}
   - component: {fileID: 1047436647}
+  - component: {fileID: 1047436648}
+  - component: {fileID: 1047436649}
   m_Layer: 0
   m_Name: Nivel2_Esp
   m_TagString: Untagged
@@ -1108,6 +1204,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 1586862007}
   right: {fileID: 0}
+  levelNumber: 0
 --- !u!4 &1047436646
 Transform:
   m_ObjectHideFlags: 0
@@ -1138,6 +1235,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 5
   isUnlocked: 0
+--- !u!114 &1047436648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047436644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a57b1f7856e3a4086c2872e0f0f8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: 
+  isCompleted: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  scene: 
+--- !u!58 &1047436649
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047436644}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1194424149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1280,8 @@ GameObject:
   - component: {fileID: 1194424151}
   - component: {fileID: 1194424150}
   - component: {fileID: 1194424152}
+  - component: {fileID: 1194424153}
+  - component: {fileID: 1194424154}
   m_Layer: 0
   m_Name: Nivel4_Esp
   m_TagString: Untagged
@@ -1173,6 +1306,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 1047252506}
   right: {fileID: 1974600793}
+  levelNumber: 0
 --- !u!4 &1194424151
 Transform:
   m_ObjectHideFlags: 0
@@ -1203,6 +1337,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 7
   isUnlocked: 0
+--- !u!114 &1194424153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194424149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a57b1f7856e3a4086c2872e0f0f8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: 
+  isCompleted: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  scene: 
+--- !u!58 &1194424154
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194424149}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1205078715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,6 +1597,8 @@ GameObject:
   - component: {fileID: 1435746460}
   - component: {fileID: 1435746459}
   - component: {fileID: 1435746461}
+  - component: {fileID: 1435746462}
+  - component: {fileID: 1435746463}
   m_Layer: 0
   m_Name: Nivel4_Mate
   m_TagString: Untagged
@@ -1453,6 +1623,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 807424562}
   right: {fileID: 1945884247}
+  levelNumber: 0
 --- !u!4 &1435746460
 Transform:
   m_ObjectHideFlags: 0
@@ -1481,8 +1652,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7140679813eca9447bb2cfd17eed6561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNumber: 0
+  levelNumber: 3
   isUnlocked: 0
+--- !u!114 &1435746462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435746458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a57b1f7856e3a4086c2872e0f0f8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: AbrirNivel4
+  isCompleted: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  scene: Math-Lvl4
+--- !u!58 &1435746463
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435746458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1586862006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1699,8 @@ GameObject:
   - component: {fileID: 1586862008}
   - component: {fileID: 1586862007}
   - component: {fileID: 1586862009}
+  - component: {fileID: 1586862010}
+  - component: {fileID: 1586862011}
   m_Layer: 0
   m_Name: Nivel1_Esp
   m_TagString: Untagged
@@ -1518,6 +1725,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 307415279}
   right: {fileID: 1047436645}
+  levelNumber: 0
 --- !u!4 &1586862008
 Transform:
   m_ObjectHideFlags: 0
@@ -1548,6 +1756,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 0
   isUnlocked: 1
+--- !u!114 &1586862010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586862006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a57b1f7856e3a4086c2872e0f0f8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: 
+  isCompleted: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  scene: 
+--- !u!58 &1586862011
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586862006}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1889554839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,6 +1969,7 @@ GameObject:
   - component: {fileID: 1945884246}
   - component: {fileID: 1945884247}
   - component: {fileID: 1945884248}
+  - component: {fileID: 1945884249}
   m_Layer: 0
   m_Name: Final2
   m_TagString: Untagged
@@ -1766,6 +2009,7 @@ MonoBehaviour:
   down: {fileID: 0}
   left: {fileID: 1435746459}
   right: {fileID: 0}
+  levelNumber: 0
 --- !u!114 &1945884248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1780,6 +2024,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 9
   isUnlocked: 0
+--- !u!58 &1945884249
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945884245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1959548466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,6 +2174,9 @@ GameObject:
   - component: {fileID: 1974600794}
   - component: {fileID: 1974600793}
   - component: {fileID: 1974600795}
+  - component: {fileID: 1974600797}
+  - component: {fileID: 1974600796}
+  - component: {fileID: 1974600798}
   m_Layer: 0
   m_Name: Nivel3_Esp
   m_TagString: Untagged
@@ -1938,6 +2201,7 @@ MonoBehaviour:
   down: {fileID: 1047436645}
   left: {fileID: 1194424150}
   right: {fileID: 0}
+  levelNumber: 0
 --- !u!4 &1974600794
 Transform:
   m_ObjectHideFlags: 0
@@ -1968,6 +2232,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 6
   isUnlocked: 0
+--- !u!114 &1974600796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974600792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a57b1f7856e3a4086c2872e0f0f8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: 
+  isCompleted: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  scene: 
+--- !u!114 &1974600797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974600792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a57b1f7856e3a4086c2872e0f0f8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: 
+  isCompleted: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  scene: 
+--- !u!58 &1974600798
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974600792}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &2007473720
 GameObject:
   m_ObjectHideFlags: 0

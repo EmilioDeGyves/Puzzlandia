@@ -20,7 +20,11 @@ public class PalabrasAcentuadas : MonoBehaviour
         string triName = null; if (tri.gameObject.name != null) { triName = tri.gameObject.name; }
         string triTag = null; if (tri.gameObject.tag != null) { triTag = tri.gameObject.tag; }
         Rigidbody2D triRB = null; if (tri.transform.GetComponent<Rigidbody2D>() != null) { triRB = tri.transform.GetComponent<Rigidbody2D>(); }
+        if (tri.CompareTag("WordLimit"))
+        {
+            transform.position = posicionInicial;
 
+        }
         if (triName != acentuacionCorrecta)
         {
             if (triName == "Agudas" || triName == "Graves" || triName == "Esdrújulas")

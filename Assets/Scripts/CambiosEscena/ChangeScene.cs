@@ -10,15 +10,43 @@ public class ChangeScene : MonoBehaviour
     public string spawnPointTag = "SpawnPoint";
     public bool finalNivel;
     public string LevelUnlocked;
+    public int maxEntry = 3;
+    public Transform[] predefinedPositions; // Array de las 4 posiciones predefinidas
+    public GameObject blocker; // Objeto que bloquea la salida
+    private int entryCount = 0; // Contador de las veces que el jugador entra
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(playerTag))
         {
-            if (finalNivel) { 
-            PlayerPrefs.SetInt("Level"+ LevelUnlocked + "Unlocked", 1);
+            entryCount++;
+            if (entryCount == maxEntry - 1)
+            {
+                finalNivel = true;
             }
-            SceneManager.LoadScene(targetScene);
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            if (entryCount < maxEntry) // Cambia de posición durante las primeras 3 entradas
+            {
+               
+                int randomIndex = Random.Range(0, predefinedPositions.Length);
+                transform.position = predefinedPositions[randomIndex].position;
+                transform.rotation = predefinedPositions[randomIndex].rotation;
+                blocker.transform.position = predefinedPositions[randomIndex].position;
+                blocker.transform.rotation = predefinedPositions[randomIndex].rotation;
+                blocker.SetActive(true);
+
+                
+            }
+            else if (entryCount == maxEntry) // En la cuarta entrada, carga la escena y desbloquea el nivel
+            {
+                if (finalNivel)
+                {
+                    UnlockNode.UnlockLevel(int.Parse(LevelUnlocked));
+                    Debug.Log("desbloqueado " + LevelUnlocked);
+                }
+
+                SceneManager.LoadScene(targetScene);
+                SceneManager.sceneLoaded += OnSceneLoaded;
+            }
         }
     }
 
@@ -38,6 +66,4 @@ public class ChangeScene : MonoBehaviour
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
     }
-
-   
 }
