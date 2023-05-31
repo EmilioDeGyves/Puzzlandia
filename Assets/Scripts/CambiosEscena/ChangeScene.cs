@@ -26,7 +26,14 @@ public class ChangeScene : MonoBehaviour
             }
             if (entryCount < maxEntry) // Cambia de posición durante las primeras 3 entradas
             {
-               
+                if (GameObject.FindAnyObjectByType<Nivel1Cuarto2>() != null) { GameObject.FindAnyObjectByType<Nivel1Cuarto2>().ChangeStageValues(); }
+                if (GameObject.FindAnyObjectByType<Nivel_Pastel>() != null) { GameObject.FindAnyObjectByType<Nivel_Pastel>().RestartCakes(); }
+                if (GameObject.FindAnyObjectByType<Articulos>() != null) { GameObject.FindAnyObjectByType<Articulos>().RestartArticulos(); }
+                if (GameObject.FindAnyObjectByType<Conjugaciones>() != null) { GameObject.FindAnyObjectByType<Conjugaciones>().RestartArticulos(); }
+                if (GameObject.FindAnyObjectByType<PersonajeAcent>() != null) { GameObject.FindAnyObjectByType<PersonajeAcent>().RestartAcents(); }
+                if (GameObject.FindAnyObjectByType<SinsAnts>() != null) { GameObject.FindAnyObjectByType<SinsAnts>().RestartSinsAnts(); }
+
+
                 int randomIndex = Random.Range(0, predefinedPositions.Length);
                 transform.position = predefinedPositions[randomIndex].position;
                 transform.rotation = predefinedPositions[randomIndex].rotation;

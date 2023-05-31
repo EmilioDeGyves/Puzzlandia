@@ -7,6 +7,8 @@ public class Articulos : MonoBehaviour
     public GameObject doorLock;
     public float articuloSpeed;
     public float minDistance;
+    public GameObject[] articulos;
+    private Vector2[] articulosPos;
     private Rigidbody2D articuloRB;
 
     private Rigidbody2D rb;
@@ -14,12 +16,15 @@ public class Articulos : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        articulosPos = new Vector2[articulos.Length];
+        int i = 0;
+        foreach(GameObject articulo in articulos)
+        {
+            articulosPos[i] = articulo.transform.position;
+            i += 1;
+        }
     }
 
-    void Update()
-    {
-        
-    }
 
     void FixedUpdate()
     {
@@ -28,6 +33,21 @@ public class Articulos : MonoBehaviour
             if (Vector2.Distance(articuloRB.position, rb.position) > minDistance)
             { articuloRB.MovePosition(Vector2.MoveTowards(articuloRB.position, rb.position, articuloSpeed)); }
             
+        }
+    }
+
+    public void RestartArticulos()
+    {
+        articuloRB = null;
+        foreach (GameObject indObjeto in GameObject.FindGameObjectsWithTag("ArticuloObjeto"))
+        {
+            indObjeto.GetComponent<ArticuloObjeto>().chosenArticulo = null;
+        }
+        int i = 0;
+        foreach (GameObject articulo in articulos)
+        {
+            articulo.transform.position = articulosPos[i];
+            i += 1;
         }
     }
 
@@ -85,6 +105,6 @@ public class Articulos : MonoBehaviour
         }
 
         if (cuantosCorrectos == cuantosArtObj)
-        { Destroy(doorLock); }
+        { doorLock.SetActive(false); }
     }
 }

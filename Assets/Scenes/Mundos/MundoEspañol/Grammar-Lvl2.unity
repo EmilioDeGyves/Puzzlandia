@@ -3395,11 +3395,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40f5cfebd1477e468027b1f9567050e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: Nivel1-Cuarto3
+  targetScene: Mapa
   playerTag: Player
   spawnPointTag: SpawnpointD
   finalNivel: 0
   LevelUnlocked: 
+  maxEntry: 3
+  predefinedPositions:
+  - {fileID: 1133949234}
+  blocker: {fileID: 1705029001}
 --- !u!61 &1997749942
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3784,6 +3788,15 @@ MonoBehaviour:
   doorLock: {fileID: 1705029001}
   articuloSpeed: 0.05
   minDistance: 1
+  articulos:
+  - {fileID: 989693312}
+  - {fileID: 5085821}
+  - {fileID: 200704640}
+  - {fileID: 397166069}
+  - {fileID: 1688523613}
+  - {fileID: 1685973434}
+  - {fileID: 1276779395}
+  - {fileID: 1530202589}
 --- !u!1 &2142835510
 GameObject:
   m_ObjectHideFlags: 0

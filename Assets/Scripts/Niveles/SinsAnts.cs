@@ -8,12 +8,28 @@ public class SinsAnts : MonoBehaviour
 {
     public GameObject DoorLock;
     public TextMeshProUGUI[] palabrasTextos;
+    public GameObject[] cuartos;
 
     public GameObject[] palabrasObj;
+    private int cuartoNum;
 
     void Start()
     {
-        
+        cuartoNum = 1;
+    }
+
+    public void RestartSinsAnts()
+    {
+        cuartoNum += 1;
+        foreach (GameObject cuarto in cuartos)
+        {
+            if(cuarto != null)
+            {
+                if (cuarto != cuartos[cuartoNum])
+                { cuarto.SetActive(false); }
+                else { cuarto.SetActive(true); }
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D tri)
@@ -97,14 +113,17 @@ public class SinsAnts : MonoBehaviour
         else if (palabrasTextos[numero].text == "Duro") { palabrasTextos[numero].text = "Fuerte"; }
 
         int cuantosBien = 0;
-        if (palabrasTextos[0].text == "Triste") { cuantosBien += 1; }
-        if (palabrasTextos[1].text == "Pequeño") { cuantosBien += 1; }
-        if (palabrasTextos[2].text == "Lento") { cuantosBien += 1; }
-        if (palabrasTextos[3].text == "Feo") { cuantosBien += 1; }
-        if (palabrasTextos[4].text == "Nervioso") { cuantosBien += 1; }
-        if (palabrasTextos[5].text == "Cobarde") { cuantosBien += 1; }
-        if (palabrasTextos[6].text == "Tonto") { cuantosBien += 1; }
-        if (palabrasTextos[7].text == "Débil") { cuantosBien += 1; }
+        if(cuartoNum == 1)
+        {
+            if (palabrasTextos[0].text == "Triste") { cuantosBien += 1; }
+            if (palabrasTextos[1].text == "Pequeño") { cuantosBien += 1; }
+            if (palabrasTextos[2].text == "Lento") { cuantosBien += 1; }
+            if (palabrasTextos[3].text == "Feo") { cuantosBien += 1; }
+            if (palabrasTextos[4].text == "Nervioso") { cuantosBien += 1; }
+            if (palabrasTextos[5].text == "Cobarde") { cuantosBien += 1; }
+            if (palabrasTextos[6].text == "Tonto") { cuantosBien += 1; }
+            if (palabrasTextos[7].text == "Débil") { cuantosBien += 1; }
+        }
 
         if (cuantosBien == 4)
         {
@@ -115,6 +134,8 @@ public class SinsAnts : MonoBehaviour
         }
 
         if (cuantosBien == 8)
-        { Destroy(DoorLock); }
+        {
+            DoorLock.SetActive(false);
+        }
     }
 }

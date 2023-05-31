@@ -10,6 +10,8 @@ public class Conjugaciones : MonoBehaviour
 
     public float conjSpeed;
     public float minDistance;
+    public GameObject[] conjugaciones;
+    private Vector2[] conjsPos;
     private Rigidbody2D conjRB;
 
     private Rigidbody2D rb;
@@ -18,11 +20,28 @@ public class Conjugaciones : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        conjsPos = new Vector2[conjugaciones.Length];
+        int i = 0;
+        foreach (GameObject conj in conjugaciones)
+        {
+            conjsPos[i] = conj.transform.position;
+            i += 1;
+        }
     }
 
-    void Update()
+    public void RestartArticulos()
     {
-        
+        conjRB = null;
+        foreach (GameObject indObjeto in GameObject.FindGameObjectsWithTag("ArticuloObjeto"))
+        {
+            indObjeto.GetComponent<ConjSlots>().chosenConj = null;
+        }
+        int i = 0;
+        foreach (GameObject conj in conjugaciones)
+        {
+            conj.transform.position = conjsPos[i];
+            i += 1;
+        }
     }
 
     void FixedUpdate()
@@ -35,9 +54,12 @@ public class Conjugaciones : MonoBehaviour
         }
     }
 
-    public void Boton()
+    public void RestartConjs()
     {
-        //respuestas[0];
+        foreach (GameObject indObjeto in GameObject.FindGameObjectsWithTag("ArticuloObjeto"))
+        {
+            indObjeto.GetComponent<ConjSlots>().chosenConj = null;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D tri)
@@ -94,6 +116,6 @@ public class Conjugaciones : MonoBehaviour
         }
 
         if (cuantosCorrectos == cuantosArtObj)
-        { Destroy(doorLock); }
+        { doorLock.SetActive(false); }
     }
 }
