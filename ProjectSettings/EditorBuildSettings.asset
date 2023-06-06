@@ -6,30 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
     path: Assets/Scenes/Mapa.unity
     guid: 5819d74f197252941873ae9987ea4ca3
   - enabled: 1
-    path: Assets/Scenes/Mundos/MundoMatematicas/Math-LvL1.unity
+    path: Assets/Scenes/Mundos/MundoMatematicas/Math-Lvl1.unity
     guid: 005ca5f65a187e6468c64c9343119b63
   - enabled: 1
-    path: Assets/Scenes/Mundos/MundoMatematicas/Math-LvL2.unity
+    path: Assets/Scenes/Mundos/MundoMatematicas/Math-Lvl2.unity
     guid: 5edc89c843e9fca43b0f79d3f58ef260
   - enabled: 1
-    path: Assets/Scenes/Mundos/MundoMatematicas/Math-LvL3.unity
+    path: Assets/Scenes/Mundos/MundoMatematicas/Math-Lvl3.unity
     guid: 43bd6e2f896a2a943b2b2b7bf1cdde5a
   - enabled: 1
-    path: Assets/Scenes/Mundos/MundoMatematicas/Math-LvL4.unity
+    path: Assets/Scenes/Mundos/MundoMatematicas/Math-Lvl4.unity
     guid: d9438f00632dd844ea7961dfee72fd1e
   - enabled: 1
-    path: "Assets/Scenes/Mundos/MundoEspa\xF1ol/Grammar-LvL3.unity"
+    path: "Assets/Scenes/Mundos/MundoEspa\xF1ol/Grammar-Lvl3.unity"
     guid: 56a69e08c0667c047822342265f49c10
   - enabled: 1
-    path: "Assets/Scenes/Mundos/MundoEspa\xF1ol/Grammar-LvL2.unity"
+    path: "Assets/Scenes/Mundos/MundoEspa\xF1ol/Grammar-Lvl2.unity"
     guid: 5cc965b73a71d1c48b9be8d1a53edc9b
   - enabled: 1
-    path: "Assets/Scenes/Mundos/MundoEspa\xF1ol/Grammar-LvL4.unity"
+    path: "Assets/Scenes/Mundos/MundoEspa\xF1ol/Grammar-Lvl4.unity"
     guid: 94d3626da664f9342a6e13075f6e4bc8
   - enabled: 1
-    path: "Assets/Scenes/Mundos/MundoEspa\xF1ol/Grammar-LvL1.unity"
+    path: "Assets/Scenes/Mundos/MundoEspa\xF1ol/Grammar-Lvl1.unity"
     guid: dc2802ef6ddcc1a4f8b0a0f999f24ea1
   m_configObjects: {}
