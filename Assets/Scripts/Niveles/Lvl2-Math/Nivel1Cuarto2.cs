@@ -20,6 +20,11 @@ public class Nivel1Cuarto2 : MonoBehaviour
     {
         answerSlots = GameObject.FindGameObjectsWithTag("NumberSlots");
 
+        ChangeStageValues();
+    }
+
+    public void ChangeStageValues()
+    {
         correctAnswers[4] = Random.Range(1, 3 + 1);
         correctAnswers[3] = correctAnswers[4] + Random.Range(1, 5 + 1);
         correctAnswers[1] = Random.Range(1, 6 + 1);
@@ -29,7 +34,6 @@ public class Nivel1Cuarto2 : MonoBehaviour
         results[2].text = "=" + (correctAnswers[3] - correctAnswers[4]);
         results[3].text = "" + (correctAnswers[1] + correctAnswers[3]);
         results[4].text = "" + (correctAnswers[2] + correctAnswers[4]);
-
     }
 
     void FixedUpdate()

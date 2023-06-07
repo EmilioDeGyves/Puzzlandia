@@ -22,7 +22,7 @@ public class PalabrasAcentuadas : MonoBehaviour
         Rigidbody2D triRB = null; if (tri.transform.GetComponent<Rigidbody2D>() != null) { triRB = tri.transform.GetComponent<Rigidbody2D>(); }
         if (tri.CompareTag("WordLimit"))
         {
-            transform.position = posicionInicial;
+            GetComponent<Rigidbody2D>().AddForce((tri.transform.position - transform.position).normalized * -100);
 
         }
         if (triName != acentuacionCorrecta)
