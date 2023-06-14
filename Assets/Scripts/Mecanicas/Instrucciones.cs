@@ -3,43 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Pausa : MonoBehaviour
+public class Instrucciones : MonoBehaviour
 {
-    public GameObject pauseMenuUI; //pantalla de pausa
-    private bool isPaused = false; //booleano para determinar la pausa
+    public GameObject IntructionsMenu; //pantalla de pausa
+    private bool instuctionsON = false; //booleano para determinar la pausa
 
     private void Start()
     {
-        Resume(); //por default corre el juego
+        Paused();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown("p"))
         {
-            if (isPaused)
+            if (instuctionsON)
             {
                 Resume();
             }
-            else
-            {
-                Paused();
-            }
+            
         }
     }
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        IntructionsMenu.SetActive(false);
         Time.timeScale = 1f;
-        isPaused = false;
+        instuctionsON = false;
     }
 
-    void Paused()
+    public void Paused()
     {
-        pauseMenuUI.SetActive(true);
+        IntructionsMenu.SetActive(true);
         Time.timeScale = 0f;
-        isPaused = true;
+        instuctionsON = true;
     }
 
     public void LoadMenu()
@@ -52,7 +49,4 @@ public class Pausa : MonoBehaviour
     {
         Application.Quit();
     }
-
 }
-
-

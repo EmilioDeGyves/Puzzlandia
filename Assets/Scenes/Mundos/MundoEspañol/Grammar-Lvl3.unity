@@ -4751,7 +4751,7 @@ MonoBehaviour:
   spawnPointTag: SpawnpointL
   finalNivel: 0
   LevelUnlocked: 7
-  maxEntry: 3
+  maxEntry: 1
   predefinedPositions:
   - {fileID: 318275599}
   - {fileID: 1044529155}
