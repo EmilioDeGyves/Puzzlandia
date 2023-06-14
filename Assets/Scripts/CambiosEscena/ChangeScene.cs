@@ -29,7 +29,7 @@ public class ChangeScene : MonoBehaviour
                 if (GameObject.FindAnyObjectByType<Nivel1Cuarto2>() != null) { GameObject.FindAnyObjectByType<Nivel1Cuarto2>().ChangeStageValues(); }
                 if (GameObject.FindAnyObjectByType<FlowerController>() != null) { GameObject.FindAnyObjectByType<FlowerController>().ResetGame(); }
                 if (GameObject.FindAnyObjectByType<Articulos>() != null) { GameObject.FindAnyObjectByType<Articulos>().RestartArticulos(); }
-                if (GameObject.FindAnyObjectByType<Conjugaciones>() != null) { GameObject.FindAnyObjectByType<Conjugaciones>().RestartArticulos(); }
+                if (GameObject.FindAnyObjectByType<Conjugaciones>() != null) { GameObject.FindAnyObjectByType<Conjugaciones>().RestartConjs(); }
                 if (GameObject.FindAnyObjectByType<PersonajeAcent>() != null) { GameObject.FindAnyObjectByType<PersonajeAcent>().RestartAcents(); }
                 if (GameObject.FindAnyObjectByType<SinsAnts>() != null) { GameObject.FindAnyObjectByType<SinsAnts>().RestartSinsAnts(); }
 

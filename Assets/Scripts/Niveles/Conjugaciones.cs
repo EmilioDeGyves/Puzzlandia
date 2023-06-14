@@ -11,10 +11,15 @@ public class Conjugaciones : MonoBehaviour
     public float conjSpeed;
     public float minDistance;
     public GameObject[] conjugaciones;
+
+    public GameObject[] cuartosObjects;
+    public GameObject[] canvasObjects;
+
     private Vector2[] conjsPos;
     private Rigidbody2D conjRB;
 
     private Rigidbody2D rb;
+    private int cuarto;
 
 
     void Start()
@@ -27,12 +32,14 @@ public class Conjugaciones : MonoBehaviour
             conjsPos[i] = conj.transform.position;
             i += 1;
         }
+        cuarto = 1;
     }
 
-    public void RestartArticulos()
+    public void RestartConjs()
     {
         conjRB = null;
-        foreach (GameObject indObjeto in GameObject.FindGameObjectsWithTag("ArticuloObjeto"))
+        GameObject.Find("CButton").GetComponent<ConjSlots>().chosenConj = null;
+        /*foreach (GameObject indObjeto in GameObject.FindGameObjectsWithTag("ArticuloObjeto"))
         {
             indObjeto.GetComponent<ConjSlots>().chosenConj = null;
         }
@@ -41,7 +48,12 @@ public class Conjugaciones : MonoBehaviour
         {
             conj.transform.position = conjsPos[i];
             i += 1;
-        }
+        }*/
+        cuartosObjects[cuarto].SetActive(false);
+        canvasObjects[cuarto].SetActive(false);
+        cuarto += 1;
+        cuartosObjects[cuarto].SetActive(true);
+        canvasObjects[cuarto].SetActive(true);
     }
 
     void FixedUpdate()
@@ -54,7 +66,7 @@ public class Conjugaciones : MonoBehaviour
         }
     }
 
-    public void RestartConjs()
+    public void Nonono()
     {
         foreach (GameObject indObjeto in GameObject.FindGameObjectsWithTag("ArticuloObjeto"))
         {
@@ -105,7 +117,6 @@ public class Conjugaciones : MonoBehaviour
 
     public void CheckToOpenDoor()
     {
-        int cuantosArtObj = GameObject.FindGameObjectsWithTag("ArticuloObjeto").Length;
         int cuantosCorrectos = 0;
 
         foreach (GameObject indObjeto in GameObject.FindGameObjectsWithTag("ArticuloObjeto"))
@@ -115,7 +126,7 @@ public class Conjugaciones : MonoBehaviour
             { cuantosCorrectos += 1; }
         }
 
-        if (cuantosCorrectos == cuantosArtObj)
+        if (cuantosCorrectos == 4)
         { doorLock.SetActive(false); }
     }
 }
